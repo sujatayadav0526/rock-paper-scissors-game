@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock,paper and Scissor game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body >
+    <h1 class="heading" style="color:rgb(134, 134, 235); font-style: italic;">Rock x Paper x Scissor</h1>
+    <h1 class="heading" style="color:rgb(134, 134, 235); font-style: italic;">Game begins!</h1>
+    <div class="game-container" >
+        <div class="rock-button">
+       <a href=""><img src="rock.jpeg" style="height:90px;" alt="rock image"></a>
+    <button class="RPS" id="rock" onclick="
+    {let yourchoice=' rock';
+        let randomchoice=Math.random()*3;
+        let computerchoice;
+        if (randomchoice>0 && randomchoice<=1){
+            computerchoice='Rock';
+        }
+        else if(randomchoice>1 && randomchoice<=2){
+            computerchoice='paper';
+        }
+        else{computerchoice='Scissor';}
+
+        let resultmessage;
+        if(computerchoice==='Rock'){
+            resultmessage= 'match tie,replay';
+        }
+        else if(computerchoice==='paper'){
+            resultmessage='you lose! 😕';
+        }
+        if(computerchoice==='Scissor'){
+            resultmessage='you won! 🥳';
+        }
+        alert(`you choose ${yourchoice}.computer chose ${computerchoice}.${resultmessage}`);
+    }">✊ Rock</button>
+</div>
+<div class="paper-button">
+<a href=""><img src="paper.png" style="height:90px;" alt="paper image"></a>
+    <button class="RPS" id="paper" onclick="
+    {let yourchoice='paper';
+        let randomchoice=Math.random()*3;
+        let computerchoice;
+        if (randomchoice>0 && randomchoice<=1){
+            computerchoice='Rock';
+        }
+        else if(randomchoice>1 && randomchoice<=2){
+            computerchoice='paper';
+        }
+        else{computerchoice='Scissor';}
+
+        let resultmessage;
+        if(computerchoice==='Rock'){
+            resultmessage= 'you won! 🥳';
+        }
+        else if(computerchoice==='paper'){
+            resultmessage='match tie,replay';
+        }
+        if(computerchoice==='Scissor'){
+            resultmessage='you lose! 😕';
+        }
+    alert(`you choose ${yourchoice}.computer chose ${computerchoice}.${resultmessage}`);
+    }">🖐 Paper</button>
+    </div>
+
+    <div class="scissor-button">
+        <a href=""><img src="scissor.jpg.jpeg" style="height:90px;" alt="scissor image"></a>
+    <button class="RPS" id="scissor" onclick="
+    {let yourchoice='scissor';
+        let randomchoice=Math.random()*3;
+        let computerchoice;
+        if (randomchoice>0 && randomchoice<=1){
+            computerchoice='Rock';
+        }
+        else if(randomchoice>1 && randomchoice<=2){
+            computerchoice='paper';
+        }
+        else{computerchoice='Scissor';}
+
+        let resultmessage;
+        if(computerchoice==='Rock'){
+            resultmessage= 'you lose! 😕';
+        }
+        else if(computerchoice==='paper'){
+            resultmessage='you won! 🥳';
+        }
+        if(computerchoice==='Scissor'){
+            resultmessage='match tie,replay';
+        }
+        alert(`you choose ${yourchoice}.computer chose ${computerchoice}.${resultmessage}`);
+    }">✌ Scissor </button>
+    </div>
+
+</div>
+
+</body>
+</html>
